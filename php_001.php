@@ -63,8 +63,8 @@ var_dump($bool1); // ===> bool(false)
 4 - strpos(String, "Text") ===> Return The Index Of Text In String
 5 - str_replace("OldText", "NewText", String) ===> Replace OldText With NewText In String
 6 - trim(String) ===> Remove Spaces From Left And Right In String
-7 - ltrim() ===> From Left
-7 - rtrim() ===> From Right
+7 - ltrim(String) ===> From Left
+7 - rtrim(String) ===> From Right
 */
 
 // 6 - Arithmetic Operators
@@ -94,7 +94,13 @@ $a %= $b
     ....
     else {
     }
+4 - Conditional ( Ternary ) Operator
+Syntax: (condition) ? (expression_if_true) : (expression_if_false);
 */
+// Example :
+$age = 18;
+$message = ($age >= 18) ? 'You are an adult.' : 'You are a minor.';
+echo $message;
 // The Condition Can Equal : < > <= >= == === !== != <>
 
 // 9 - Logical Operators
@@ -124,4 +130,87 @@ switch($key) {
     default: echo "Nothing";
     break;
 }
+
+// 11 - Concatination
+// يستخدم لربط السلاسل النصية مع بعضها
+/*
+ 1 - $a = "Mohamed" . " " . "Nour";
+ 2 - 
+    $a = "Mohamed";
+    $a .= " Nour";
+*/
+// Example :
+$a = "Mohamed";
+$a .= " Nour";
+echo $a;
+// Note: ملف ال بي اتش بي يكون متصل مع بعضه ضمنياً ولو كثُرت السكربتات
+
+// 12 - Loops
+// 1 - While() {}
+/*
+Syntax :
+    $i = 0;
+    while($i<10) {
+        ...Statement
+        $i++;
+    }
+*/
+// 2 - Do While Loop() {}
+// Excutes One On Least
+/*
+Syntax :
+    $i=0;
+    do {
+    ...Statement
+    $i++;
+    } while($i<10);
+*/
+// 3 - For Loop () {}
+/*
+for($i=0;$i<10;$i++) {
+    ...Statement
+}
+*/
+// Break & Continue
+// Example:
+for($i=0;$i<10;$i++) {
+    if($i === 5) 
+        break;
+}
+for($i=0;$i<10;$i++) {
+    if($i === 5) 
+        continue;
+}
+
+// Lesson 13
+// GET & POST Sends ===> Public & Private
+// Form + GET | POST ===> Send | Recive
+// Variable1: $_GET["nameOfInput"] | $_POST["nameOfInput"] ===> For Get Data
+// isset(Variable1) ===> For Check About Variable is Clicked Or No
+//  True | False
+// يمكنك وضع رابط ملف بي اتش بي ثاني في ميزة الأكشن وعند النقر يحولك ويحول المتغيرات إلى ذلك الرابط
+/*
+    Example 1:----------------
+    HTML :
+    <form method="GET">
+        <input type="email" name="email" id="email" required>
+        <input type="submit" name="send" value="Login">
+    </form>
+    PHP :
+    if(isset($_GET["send"])) {
+        echo $_GET["email"];
+    }
+    Example 2:-----------------
+    HTML :
+    <form method="GET" action="login.php">
+        <input type="email" name="email" id="email" required>
+        <input type="submit" name="send" value="Login">
+    </form>
+    PHP (login.php) :
+    if(isset($_GET["email"]) {
+        echo $_GET["email"];
+    }
+    After Send The URL IS :
+    http://localhost/try/login.php?email=abdonoor684%40gmail.com
+*/
 ?>
