@@ -70,4 +70,25 @@ foreach($arr6 as $arr) {
 // The Header And Why We Need It ?
 // 1 - header("location: url | file.php");
 // 2 - header("refresh: numberOfSecond; url=url | file.php");
+
+// Lesson 17
+// The Functions
+// 1 - Return Value Function
+// 2 - Print Value Function
+// Example:
+function print_Hi() {
+    echo "Hi Everyone";
+}
+print_Hi();
+
+// Lesson 18
+// Sessions - جلسات
+/*
+1 - session_start() ===> For Start The Session
+2 - session_unset() ===> For Remove All Variables Of Session
+3 - session_destroy() ===> For Destructed Session
+4 - $_SESSION["KeyName"] = Value;
+Note: Execute session_start() in Every Page You want to use session variables
+function empty: empty(variable) ===> Return True< Variable Exists > | False< Variable Not Exists >
+*/
 ?>
