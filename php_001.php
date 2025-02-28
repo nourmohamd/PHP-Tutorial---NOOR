@@ -2,7 +2,7 @@
 // 1 - Comments
 
 /* 
- Multi Comments
+    Multi Comments
 */
 
 // Single Comments
@@ -207,7 +207,7 @@ for($i=0;$i<10;$i++) {
         <input type="submit" name="send" value="Login">
     </form>
     PHP (login.php) :
-    if(isset($_GET["email"]) {
+    if(isset($_GET["send"]) {
         echo $_GET["email"];
     }
     After Send The URL IS :
