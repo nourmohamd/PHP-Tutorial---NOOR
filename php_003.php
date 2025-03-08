@@ -74,7 +74,7 @@ HTML:
 PHP:
 */
 if(isset($_GET["send"])) {
-    $filter = filter_input($_GET["email"], FILTER_VALIDATE_EMAIL);// True(Email) | False(Otherwise)
+    $filter = filter_input("GET", "email", FILTER_VALIDATE_EMAIL);// True(Email) | False(Otherwise)
     if($filter) {
         echo "Yes The Data is Email";
     } else {
@@ -112,7 +112,8 @@ $date = date("Y m d");
 $date = date("Y-m-d");
 /*
 Rules:
-Y: Year
+Y: Year 2025
+y: Year 25
 d: Day
 m: Month
 D: ثلاث أحرف من أسم اليوم
