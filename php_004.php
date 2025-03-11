@@ -15,6 +15,10 @@ $_SERVER["QUERY_STRING"] ===> Required With Form ( It Return URL AND Variable In
     if(isset($_GET["s"]))
         echo $_SERVER["QUERY_STRING"];// e=123&s=S
 ?>
+
+$_SERVER["SERVER_NAME"] ===> Name Of Domain Youtube, Facebook, ...
+$_SERVER["SERVER_ADDR"] ===> Number Of IP For This Device
+$_SERVER["REMOTE_ADDR"] ===> Number Of IP For Place You Use Internet in it
 */
 
 ?>

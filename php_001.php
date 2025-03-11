@@ -64,9 +64,13 @@ var_dump($bool1); // ===> bool(false)
 5 - str_replace("OldText", "NewText", String) ===> Replace OldText With NewText In String
 6 - trim(String) ===> Remove Spaces From Left And Right In String
 7 - ltrim(String) ===> From Left
-7 - rtrim(String) ===> From Right
+8 - rtrim(String) ===> From Right
+9 - substr(String, Start, Length) ===> For Get A Substring From String
+10 - str_repeat(String, Number)
+11 - ucwords(String) ===> For Transform Every First Letter To Uppercase From Every Word
+12 - strtoupper(String) ===> To UpperCase
+13 - strtolower(String) ===> To LowerCase
 */
-
 // 6 - Arithmetic Operators
 /* + - * / % ** */
 
