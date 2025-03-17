@@ -2,7 +2,7 @@
 // Lesson 19
 // Filter_Var And Strip_Tags
 // For Filter HTML Element Use Under Rules :
-$el = "<h1>Montaser</h1>"
+$el = "<h1>Montaser</h1>";
 echo $el;# Montaser ===> As Element
 // by strip_tags(var) Function
 $strip = strip_tags($el);
