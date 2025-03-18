@@ -66,4 +66,30 @@ Full Example:
     $mpdf->Output("myPdf.pdf", "D"|"I");
 ?>
 */
+
+// Lesson 28
+// Files System in PHP :
+// For Use Files Variable You Should To Write This Attribute For Form Element :
+// <form method="POST" enctype="multipart/form-data">
+// <input type="file" name="img" accept="image/*">
+// <input type="submit" name="Upload" value="Download Image">
+// </form>
+// Methods For Files Variables
+// 1 - $_FILES["nameOfField"]["name"] ===> For Print [ NameAnd.Extenssion ] Of File
+// 2 - $_FILES["nameOfField"]["tmp_name"] ===> For Return Path Of File Uploadation
+// 3 - move_uploaded_file($_FILES["nameOfField"]["tmp_name"], "path begin project".$_FILES["nameOfField"]["name"])
+// move_uploaded_file($_FILES["img"]["tmp_name"], 'img/'.$_FILES["img"]["name"]); ===> For Storage File In Path You Selected It
+// 4 - $_FILES["nameOfField"]["size"] ===> For Knowing Size Of File (Byte, KiloByte/1024, MigaByte/1024/1024)
+// 5 - $_FILES["nameOfField"]["type"] ===> For Return Type Of File
+// 6 - file_exists("path"."nameOfFile.extenssion"); ===> For Check If File Found Or No ( 1<Found> | 0<Not Found> )
+// Example:
+if(file_exists("images/",$_FILES["file"]["name"]) === false) {
+    move_uploaded_file($_FILES["file"]["name_tmp"], "images/".$_FILES["file"]["name"]); // Upload File
+}
+// 7 - unlink("Path" . "Name Of File" | $_FILES["file"]["name"]) ===> Remove File From Server
+// Example:
+if(isset($_POST["send"])) {
+    unlink("img/" . "Map.png");
+}
+
 ?>
