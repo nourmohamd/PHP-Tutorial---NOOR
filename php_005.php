@@ -92,4 +92,63 @@ if(isset($_POST["send"])) {
     unlink("img/" . "Map.png");
 }
 
+// Lesson 29
+// PHPMailer is a library it sends message to user's email
+// Cmd => Download Library => composer require phpmailer/phpmailer
+// First File << Server Side >>
+/*
+<?php
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\SMTP;
+    use PHPMailer\PHPMailer\Exception;
+
+    require './vendor/autoload.php';
+
+    $mail = new PHPMailer(true);
+
+    try{
+        // Server Setting
+        $mail->SMTPDebug  = SMTP::DEBUG_SERVER;
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = "abdonoor684@gmail.com";
+        $mail->Password   = "App Password";
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
+
+        // Content
+        $mail->isHTML(true);
+        $mail->CharSet = "UTF-8";
+    }
+    catch(Exception $e) {
+        echo $e;
+    }
+?>
+*/
+// Second File << Client Side >>
+/*
+<?php
+    require_once './server.php';
+    $mail->setFrom("abdonoor684@gmail.com", "Mohamed Nour Abdo");
+    $mail->addAddress("mnoorhamad1234@gmail.com");
+    $mail->Subject = "Application Programming Interface << API >>";
+    $mail->Body = "مقالة عن الاي بي اي";
+    $mail->send();
+    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+?>
+*/
+// أوامر أخرى
+/*
+    Client:
+    1 - $mail->addReplyTo('info@example.com', 'Information'); ===> اضافة رد على تعليق ما في الجميل
+    2 - $mail->addCC("x@gmail.com"); ===> For Send And Hidden Sender
+    3 - $mail->addBCC("x@gmail.com"); ===> Same addCC
+    // For Translate File To Gmail Application
+    4 - $mail->addAttachment("path/"."file", "new.extenssion"); ===> Translate File By New Name To Gmail
+*/
+// After Every Form You Should To Put:
+// header("Location: Same File PHP", true);
+
+
 ?>
