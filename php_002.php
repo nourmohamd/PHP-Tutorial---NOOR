@@ -70,6 +70,11 @@ foreach($arr6 as $arr) {
 // The Header And Why We Need It ?
 // 1 - header("location: url | file.php");
 // 2 - header("refresh: numberOfSecond; url=url | file.php");
+// ** Always Use This Code In The First Line In PHP File:
+// ob_start(); ===> to Buffer Output
+// ** Always Use This Code In The Last Line In PHP File:
+// ob_end_flush(); ===> This ensures headers are sent properly.
+// Without This Two Notes ** Will Happend Errors In Header
 
 // Lesson 17
 // The Functions
