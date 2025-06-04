@@ -12,7 +12,7 @@
         $mail->SMTPAuth = true;
         $mail->Username = "abdonoor684@gmail.com";
         $mail->Password = "App Password";
-        $mail->port = 465;
+        $mail->Port = 465;
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         // Content
         $mail->isHTML(true);

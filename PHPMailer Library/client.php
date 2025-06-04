@@ -3,6 +3,9 @@
     require_once "./server.php";
     $mail->setFrom("abdonoor684@gmail.com", "Mohamed Nour Abdo");
     $mail->addAddress("mnoorhamad1234@gmail.com");
+    $mail->addReplyTo('info@example.com', 'Information');
+    $mail->addCC('cc@example.com');
+    $mail->addBCC('bcc@example.com');
     $mail->Subject = "Title 1";
     $mail->Body = "HTML + CSS";
     $mail->send();
