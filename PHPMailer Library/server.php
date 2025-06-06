@@ -6,7 +6,7 @@
     $mail = new PHPMailer(true);
     try {
         // Server Settings
-        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;// This Line For Test Your Server And Data Send After You Finish Test Comments This Line
         $mail->isSMTP();
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPAuth = true;
